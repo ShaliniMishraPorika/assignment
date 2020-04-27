@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+<bean id="user" class="com.capgemini.springcore_assignment.beans.UserBean" primary="true">
+<property name="id" value="10"></property>
+<property name="name" value="Van"></property>
+</bean>
+
+<bean id="user1" class="com.capgemini.springcore_assignment.beans.UserBean" >
+<property name="id" value="11"></property>
+<property name="name" value="Maggidi"></property>
+</bean>
+
+<bean id="msg" class="com.capgemini.springcore_assignment.beans.MessageBean" autowire="byType" scope="singleton">
+<property name="message" value="welcome to spring core"></property>
+<!-- <property name="user" ref="user"></property> -->
+</bean>
+
+</beans>
